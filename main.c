@@ -1,32 +1,17 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<stdbool.h>
-
-int cube(int value){
-//A return statement that can provide the cube of a number
-    scanf("%d", &value);
-    return value * value * value;
-
-    printf("Give a number to get its cubed value: ");
-    printf("The answer is: %d", cube(0));
-}
-
-
 
 int main(){
-    FILE * TryLang = fopen("testFile_C.txt", "w"); //writes a new file
 
-    fprintf(TryLang, "Something something blablabla\nBoom may text na sa file");
+    printf("Take a look at Kenchoy's C Projects!\n");
+    printf("____________________________________\n\n");
 
-    fclose(TryLang);
+    ProjectLoop();
+
     return 0;
 }
 
 void ProjectLoop(){
-/*    printf("Take a look at Kenchoy's C Projects!\n");
-    printf("____________________________________\n\n");
-
-    ProjectLoop();*/
 
     int userInput;
     int validuserInput;
@@ -123,9 +108,9 @@ void GuessTheElo(){
     printf("Guess the ELO - You only have 5 chances\n");
     printf("***************************************\n\n");
 
-    printf("What MY person's ELO? \n");
+    printf("What MY chess.com ELO? \n");
 
-    while ((EloGuess < 1500 || EloGuess > 1600) && GuessCounter <= GuessLimit){
+    while ((EloGuess < 1600 || EloGuess > 1700) && GuessCounter <= GuessLimit){
 
         printf("%d. ", GuessCounter);
 
@@ -137,7 +122,7 @@ void GuessTheElo(){
             continue;  // Skip the rest of the loop and prompt again
         }
 
-        if (EloGuess >= 1500 && EloGuess <= 1600) {
+        if (EloGuess >= 1600 && EloGuess <= 1700) {
             printf("///  Correct!  ///\n");
         } else {
             printf("XXX  Wrong  XXX\n");
@@ -145,7 +130,7 @@ void GuessTheElo(){
         }
 
     }
-    if (EloGuess >= 1500 && EloGuess <= 1600){
+    if (EloGuess >= 1600 && EloGuess <= 1700){
         printf("Tama ka jan. My rapid chess(dot)com ELO is around %d.\n\n\n", EloGuess);
     } else {
         printf("You are out of chances to guess...\n\n\n");
@@ -176,13 +161,5 @@ void MadLibs(){
 
 //	printf("Would you like to try once more?");
 
-}
-
-void NumberInList(){
-//
-	int numbers[4];
-	printf("Enter 4 numbers: ");
-	scanf("%d", &numbers);
-	printf("The third number is: %d", numbers[2]);
 }
 
